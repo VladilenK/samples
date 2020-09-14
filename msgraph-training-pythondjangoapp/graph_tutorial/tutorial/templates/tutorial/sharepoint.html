@@ -1,0 +1,34 @@
+<!-- Copyright (c) Microsoft Corporation.
+sharepoint.html     Licensed under the MIT License. -->
+
+<!-- <SharePointSnippet> -->
+{% extends "tutorial/layout.html" %}
+{% block content %}
+<h1>SharePoint</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Url</th>
+      <th scope="col">Name</th>
+      <th scope="col">Start</th>
+      <th scope="col">End</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if sites %}
+    <h2>if sites - should be list of SharePoint sites</h2>
+    {% for site in sites %}
+    <tr>
+      <td><a href="{% url 'site_details' site.id %}">{{ site.displayName }}</a> </td>
+      <td>{{ site.webUrl }}</td>
+      <td>{{ site.name }}</td>
+      <td>{{ site.createdDateTime }}</td>
+      <td>{{ site.lastModifiedDateTime }}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+  </tbody>
+</table>
+{% endblock %}
+<!-- </SharePointSnippet> -->

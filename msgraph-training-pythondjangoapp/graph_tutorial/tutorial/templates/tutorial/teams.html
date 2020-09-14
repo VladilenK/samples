@@ -1,0 +1,30 @@
+<!-- Copyright (c) Microsoft Corporation.
+     Licensed under the MIT License. -->
+
+<!-- <TeamsSnippet> -->
+{% extends "tutorial/layout.html" %}
+{% block content %}
+<h1>Teams</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">description</th>
+      <th scope="col">id</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if teams %}
+    <h2>if teams - should be list of Teams teams</h2>
+    {% for teams in teams %}
+    <tr>
+      <td>{{ teams.displayName }}</td>
+      <td>{{ teams.description }}</td>
+      <td>{{ teams.id }}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+  </tbody>
+</table>
+{% endblock %}
+<!-- </TeamsSnippet> -->

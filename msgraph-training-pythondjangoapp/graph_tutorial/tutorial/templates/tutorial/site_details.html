@@ -1,0 +1,17 @@
+<!-- Copyright (c) Microsoft Corporation.
+sharepoint.html     Licensed under the MIT License. -->
+
+<!-- <SharePointSnippet> -->
+{% extends "tutorial/layout.html" %}
+{% block content %}
+<h1>SharePoint Site Details</h1>
+<ul>
+<li>{{ site.webUrl }}</li>
+<li>{{ site.name }}</li>
+<li>{{ site.displayName }}</li>
+<li>{{ site.description }}</li>
+<li>{{ site.createdDateTime }}</li>
+<li>{{ site.lastModifiedDateTime }}</li>
+</ul>
+{% endblock %}
+<!-- </SharePointSnippet> -->
